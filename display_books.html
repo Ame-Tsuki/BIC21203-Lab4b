@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4b - Q2</title>
+</head>
+<body>
+    <h1>Book Details (Check Console)</h1>
+
+    <script>
+        // JSON data embedded directly (no fetch needed)
+        const data = [
+            {
+                "title": "The Great Gatsby",
+                "author": "F. Scott Fitzgerald",
+                "publicationYear": 1925,
+                "genres": ["Fiction", "Classics"]
+            },
+            {
+                "title": "To Kill a Mockingbird",
+                "author": "Harper Lee",
+                "publicationYear": 1960,
+                "genres": ["Fiction", "Coming-of-Age"]
+            }
+        ];
+
+        console.log("(a) Title of the first book:", data[0].title);
+        console.log("(b) Author of the second book:", data[1].author);
+        console.log("(c) Genres of all books:");
+        data.forEach((book, index) => {
+            console.log(`  Book ${index + 1}: ${book.genres.join(", ")}`);
+        });
+    </script>
+</body>
+</html>
